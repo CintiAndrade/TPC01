@@ -1,4 +1,4 @@
-package tpc;
+
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingConstants;
 
-public final class TPC01 extends JFrame {
+public final class Frikfrak  extends JFrame {
 
     ImageIcon iconpeca1 = new ImageIcon(getClass().getResource("b.jpg"));
     ImageIcon iconpeca2 = new ImageIcon(getClass().getResource("x.png"));
@@ -33,14 +33,14 @@ public final class TPC01 extends JFrame {
 
     JLabel mensagemTela = new JLabel("Vez do jogador " + Djugador_1);
 
-    public TPC01() {
+    public Frikfrak () {
 
         verTela();
     }
 
-    public void JogoPeça() {
-        labelPecaDjugador1 = new JLabel("Jogador 1  - peças restantes: 3");
-        labelPecaDjugador2 = new JLabel("Jogador 2  - peças restantes: 3");
+    public void JogPeça() {
+        labelPecaDjugador1 = new JLabel();
+        labelPecaDjugador2 = new JLabel();
     }
 
     public void verTela() {
@@ -61,19 +61,8 @@ public final class TPC01 extends JFrame {
         }
     }
 
-    public void vezJogador() {
-        if (buBez == 1) {
-            buBez = 2;
-            mensagemTela.setText("Bes de djugador 2");
-            mensagemTela.setForeground(Color.red);
-        } else {
-            buBez = 1;
-            mensagemTela.setText("Bes de djugador 1");
-            mensagemTela.setForeground(Color.blue);
-        }
-    }
 
-    public void TPC01() {
+    public void Frikfrak () {
         pecaDjugador1 = 3;
         pecaDjugador2 = 3;
     }
@@ -81,36 +70,28 @@ public final class TPC01 extends JFrame {
    
         public boolean imprimirVencedor(int peça) {
 
-            if ((tab[0][0].jogada == peça && tab[0][1].jogada == peça && tab[0][2].jogada == peça)
-                    || (tab[0][0].jogada == peça && tab[0][1].jogada == peça && tab[0][2].jogada == peça)) {
+            if (tab[0][0].jogada == peça && tab[0][1].jogada == peça && tab[0][2].jogada == peça) {
                 return true;
             }
-            if ((tab[1][0].jogada == peça && tab[1][1].jogada == peça && tab[1][2].jogada == peça)
-                    || (tab[1][0].jogada == peça && tab[1][1].jogada == peça && tab[1][2].jogada == peça)) {
+            if (tab[1][0].jogada == peça && tab[1][1].jogada == peça && tab[1][2].jogada == peça) {
                 return true;
             }
-            if ((tab[2][0].jogada == peça && tab[2][1].jogada == peça && tab[2][2].jogada == peça)
-                    || (tab[2][0].jogada == peça && tab[2][1].jogada == peça && tab[2][2].jogada == peça)) {
+            if ((tab[2][0].jogada == peça && tab[2][1].jogada == peça && tab[2][2].jogada == peça) {
                 return true;
             }
-            if ((tab[0][0].jogada == peça && tab[1][1].jogada == peça && tab[2][2].jogada == peça)
-                    || (tab[0][0].jogada == peça && tab[1][1].jogada == peça && tab[2][2].jogada == peça)) {
+            if ((tab[0][0].jogada == peça && tab[1][1].jogada == peça && tab[2][2].jogada == peça) {
                 return true;
             }
-            if ((tab[0][1].jogada == peça && tab[1][1].jogada == peça && tab[2][1].jogada == peça)
-                    || (tab[0][1].jogada == peça && tab[1][1].jogada == peça && tab[2][1].jogada == peça)) {
+            if (tab[0][1].jogada == peça && tab[1][1].jogada == peça && tab[2][1].jogada == peça){
                 return true;
             }
-            if ((tab[0][0].jogada == peça && tab[1][0].jogada == peça && tab[2][0].jogada == peça)
-                    || (tab[0][0].jogada == peça && tab[1][0].jogada == peça && tab[2][0].jogada == peça)) {
+            if  (tab[0][0].jogada == peça && tab[1][0].jogada == peça && tab[2][0].jogada == peça){
                 return true;
             }
-            if ((tab[0][2].jogada == peça && tab[1][2].jogada == peça && tab[2][2].jogada == peça)
-                    || (tab[0][2].jogada == peça && tab[1][2].jogada == peça && tab[2][2].jogada == peça)) {
+            if (tab[0][2].jogada == peça && tab[1][2].jogada == peça && tab[2][2].jogada == peça) {
                 return true;
             }
-            if ((tab[0][2].jogada == peça && tab[1][1].jogada == peça && tab[2][0].jogada == peça)
-                    || (tab[0][2].jogada == peça && tab[1][1].jogada == peça && tab[2][0].jogada == peça)) {
+            if (tab[0][2].jogada == peça && tab[1][1].jogada == peça && tab[2][0].jogada == peça){
             }
             return false;
 
@@ -199,7 +180,7 @@ public final class TPC01 extends JFrame {
         }
 
         public static void main(String[] args) {
-            new TPC01();
+            new Frikfrak();
  } 
        
         
